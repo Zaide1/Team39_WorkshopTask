@@ -37,13 +37,14 @@
         </nav>
     </header>
 
-    {{-- @todo Add comments to explain how the $module variable is used --}}
+    {{-- @The module name heading is taken and given the variable name $module, this is then used to access different atrributes such as module code from that module. --}}
     <h1>{{$module->modulename}}</h1>
     <h2> Module Code: {{$module->modulecode}}</h2>
 
     <p>
         <b>Optional?: </b>
         {{-- @todo Add comments to explain the if statement below --}}
+        {{-- Checks if the optional attribute of the module is 0 if it is, then outputs no -it's not option else outputs yes --}}
         @if ($module->optional == 0)
         No
         @else
@@ -51,7 +52,9 @@
         @endif
     </p>
 
-    {{-- @todo Add comments to explain the student number fields --}}
+    {{-- Outputs the max number of students as the module's maxstudents attribute --}}
+
+
 
     <p><b>Maximum number of students:</b> {{$module->maxstudents}}</p>
 
