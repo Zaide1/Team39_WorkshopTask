@@ -67,6 +67,11 @@ class ModuleSeeder extends Seeder
             'optional' => '0',
         ]);
 
+        $module = Module::create([
+            // existing columns
+            'update' => now(),
+        ]);
+
         // @todo: what is the purpose of this foreach loop?
         // @todo: what does it loop through?
 
