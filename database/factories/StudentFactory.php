@@ -15,6 +15,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  * 
  * @todo: What artisan command was used to create this class?
  */
+/* The `class StudentFactory extends Factory` is creating a factory class for the `Student` model. It
+extends the base `Factory` class provided by Laravel's Eloquent ORM. This factory class is used to
+generate fake data for the `Student` model, which can be used for testing or seeding the database. */
 class StudentFactory extends Factory
 {
     /**
@@ -24,6 +27,10 @@ class StudentFactory extends Factory
      *
      * @return array<string, mixed>
      */
+   /* The `public function definition(): array` is a method within the `StudentFactory` class that
+   defines the structure and data for generating fake data for the `Student` model. It returns an
+   array of key-value pairs, where each key represents a column in the `students` table and the
+   value represents the fake data to be inserted into that column. */
     public function definition(): array
     {
         /** 
@@ -40,6 +47,9 @@ class StudentFactory extends Factory
          */ 
          
 
+       /* The `return [` statement is returning an array of key-value pairs. Each key represents a
+       column in the `students` table, and each value represents the fake data to be inserted into
+       that column. */
         return [
             'firstname' => $this->faker->firstName(),
             'surname' => $this->faker->lastName(),
